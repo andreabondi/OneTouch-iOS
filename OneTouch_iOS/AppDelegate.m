@@ -1,15 +1,15 @@
 //
 //  AppDelegate.m
-//  OneTouch_iOS
+//  Dyson
 //
 //  Created by Bondi, Andrea on 17/05/2016.
 //  Copyright © 2016 Bondi, Andrea. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -40,6 +40,39 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    if ([url.scheme localizedCaseInsensitiveCompare:@"it.andreabondi.magnes"] == NSOrderedSame) {
+        NSDictionary *params = [self parseQueryString:[url query]];
+        if([url.host localizedCaseInsensitiveCompare:@"return"] == NSOrderedSame) {
+            NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+            [nc postNotificationName:@"completePayPalCheckout" object: self userInfo: params];
+        }
+        else {
+            NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];
+            [nc postNotificationName:@"cancelPayPalCheckout" object: self userInfo: params];
+        }
+        return YES;
+    }
+    return NO;
+}
+
+- (NSDictionary *)parseQueryString:(NSString *)query {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:6];
+    NSArray *pairs = [query componentsSeparatedByString:@"&"];
+    
+    for (NSString *pair in pairs) {
+        NSArray *elements = [pair componentsSeparatedByString:@"="];
+        NSString *key = [[elements objectAtIndex:0] stringByRemovingPercentEncoding];
+        NSString *val = [[elements objectAtIndex:1] stringByRemovingPercentEncoding];
+        
+        [dict setObject:val forKey:key];
+    }
+    return dict;
 }
 
 @end

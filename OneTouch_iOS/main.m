@@ -1,6 +1,6 @@
 //
 //  main.m
-//  OneTouch_iOS
+//  Dyson
 //
 //  Created by Bondi, Andrea on 17/05/2016.
 //  Copyright © 2016 Bondi, Andrea. All rights reserved.
