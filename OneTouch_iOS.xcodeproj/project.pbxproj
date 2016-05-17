@@ -14,6 +14,7 @@
 		BE6088DC1CEB247D0077200C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE6088DB1CEB247D0077200C /* Assets.xcassets */; };
 		BE6088DF1CEB247D0077200C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE6088DD1CEB247D0077200C /* LaunchScreen.storyboard */; };
 		BE6088E71CEB261E0077200C /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE6088E61CEB261E0077200C /* LICENSE */; };
+		BE7C29861CEB2BBE009C2E9A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = BE7C29851CEB2BBE009C2E9A /* README.md */; };
 		BECE84D81CEB27EB00FC7770 /* libPPRiskComponent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE84D71CEB27EB00FC7770 /* libPPRiskComponent.a */; };
 		BECE84DA1CEB285A00FC7770 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE84D91CEB285A00FC7770 /* CoreLocation.framework */; };
 		BECE84DC1CEB285F00FC7770 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECE84DB1CEB285F00FC7770 /* SystemConfiguration.framework */; };
@@ -40,6 +41,7 @@
 		BE6088E01CEB247D0077200C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE6088E61CEB261E0077200C /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BE6088E81CEB269D0077200C /* PPRiskComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRiskComponent.h; sourceTree = "<group>"; };
+		BE7C29851CEB2BBE009C2E9A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BECE84D71CEB27EB00FC7770 /* libPPRiskComponent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPPRiskComponent.a; sourceTree = SOURCE_ROOT; };
 		BECE84D91CEB285A00FC7770 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BECE84DB1CEB285F00FC7770 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 				BE6088E01CEB247D0077200C /* Info.plist */,
 				BE6088CF1CEB247D0077200C /* Supporting Files */,
 				BE6088E61CEB261E0077200C /* LICENSE */,
+				BE7C29851CEB2BBE009C2E9A /* README.md */,
 			);
 			path = OneTouch_iOS;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				BE6088D71CEB247D0077200C /* ViewController.m in Sources */,
 				BE6088D41CEB247D0077200C /* AppDelegate.m in Sources */,
+				BE7C29861CEB2BBE009C2E9A /* README.md in Sources */,
 				BE6088D11CEB247D0077200C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
